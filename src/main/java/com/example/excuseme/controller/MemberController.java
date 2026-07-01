@@ -1,7 +1,7 @@
-package com.example.excuseme.Controller;
+package com.example.excuseme.controller;
 
-import com.example.excuseme.Domain.Member;
-import com.example.excuseme.Service.MemberService;
+import com.example.excuseme.domain.Member;
+import com.example.excuseme.service.MemberService;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;

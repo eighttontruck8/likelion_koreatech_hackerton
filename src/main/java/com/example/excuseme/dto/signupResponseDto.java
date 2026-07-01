@@ -1,4 +1,4 @@
-package com.example.excuseme.DTO;
+package com.example.excuseme.dto;
 
 public class signupResponseDto {
     id

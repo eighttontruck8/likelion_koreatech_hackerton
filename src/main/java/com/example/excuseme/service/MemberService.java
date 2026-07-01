@@ -1,6 +1,6 @@
-package com.example.excuseme.Service;
+package com.example.excuseme.service;
 
-import com.example.excuseme.Domain.Member;
+import com.example.excuseme.domain.Member;
 import org.springframework.stereotype.Service;
 
 @Service

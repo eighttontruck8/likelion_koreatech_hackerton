@@ -1,7 +1,8 @@
-package com.example.excuseme.Domain;
+package com.example.excuseme.domain;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.Getter;
 
@@ -9,20 +10,20 @@ import lombok.Getter;
 @Entity
 public class Member {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY) // DB: auto-increment 사용
     private Long id;
+
+    //TODO: 중복 불가 설정 (UNIQUE), NULLABLE=FALSE
     private String email;
     private String password;
     private String nickname;
-    private String role;
 
     //TODO: OAUTH 추가 시 provider, providerId 생성 필요
 
-    public Member() {}
-    public Member(String email, String password, String nickname, String role) {
+    protected Member() {}
+    public Member(String email, String password, String nickname) {
         this.email = email;
         this.password = password;
         this.nickname = nickname;
-        this.role = role;
     }
 }

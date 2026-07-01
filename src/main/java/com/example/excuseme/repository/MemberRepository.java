@@ -1,6 +1,6 @@
-package com.example.excuseme.Repository.MemberRepository;
+package com.example.excuseme.repository;
 
-import com.example.excuseme.Domain.Member;
+import com.example.excuseme.domain.Member;
 import org.springframework.stereotype.Repository;
 
 @Repository
