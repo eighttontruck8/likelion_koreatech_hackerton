@@ -1,20 +1,28 @@
 package com.example.excuseme.Domain;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
 import lombok.Getter;
-import lombok.Setter;
 
-@Setter
 @Getter
+@Entity
 public class Member {
-    private int id;
+    @Id
+    @GeneratedValue
+    private Long id;
     private String email;
     private String password;
     private String nickname;
     private String role;
 
-    public Member(int id, String email, String password) {
-        this.id = id;
+    //TODO: OAUTH 추가 시 provider, providerId 생성 필요
+
+    public Member() {}
+    public Member(String email, String password, String nickname, String role) {
         this.email = email;
         this.password = password;
+        this.nickname = nickname;
+        this.role = role;
     }
 }
